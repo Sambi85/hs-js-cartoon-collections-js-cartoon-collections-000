@@ -9,7 +9,7 @@ describe("dwarfRollCall", function() {
 
 describe("summonCaptainPlanet", function() {
   it("returns an array with the same number of elements that it was given", function() {
-        var veggies = ["carrot", "cucumber", "pepper"];
+        var veggies = ["carrots", "broccoli", "beets"];
         expect(summonCaptainPlanet(veggies).length).toEqual(3);
   });
 
