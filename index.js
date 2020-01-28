@@ -1,39 +1,43 @@
-const i = [];
+ const i = []; // var for loops
+ 
+// my idea --- for loop, let, interpole, index//
+
 
 function dwarfRollCall(dwarves) { 
-  const rollcall = [];
+  let rollcall = [];
     for(let i =0; i < dwarves.length; i++) {
-      rollcall.push([i+1]+`. ${dwarves[i]}`);
-    }
-  return rollcall.join(' ')+' '; //removes commas & spacing
+      rollcall += `${[i+1]}. ${dwarves[i]} `;
+  }
+      return rollcall; 
 }
 
+
+// my idea --- make an object, .map + .uppercase + "!"//
 
 function summonCaptainPlanet(planeteerCalls) {
-  const call = [];
-  const loud = "!"; // adds "!"
-    for (let i=0; i < planeteerCalls.length; i++) {
-      call.push(`${planeteerCalls[i]}${loud}`.toUpperCase());
-  }
-  return call;
-
+   return planeteerCalls.map(loud => loud.toUpperCase() + "!");
 }
+
   
-  
+// my idea --- Boolean + .length//
+
 function longPlaneteerCalls(words) {
-
-return  Boolean(words.length >= 4); 
+return Boolean(words.length >= 4); 
 }
 
+
+// my idea --- const, for loop, let, .indexof foods, if not equal to -1, return foods or return string//
 
 function findTheCheese (foods) {
+  const cheese = ["cheddar", "gouda", "camembert"];
+  
   for (let i=0; i < foods.length; i++) { 
-    if (foods[i] ==='gouda'|| foods[i]=== 'cheddar'||foods[i]==='camembert') {
-      return foods[i];
-    }   
+      
+      let flag = cheese.indexOf(foods[i]);
+        
+        if(flag !== -1) {
+          return foods[i];
+    }
+  }    
+      return "no cheese!";
 }
-
-   return "no cheese!";
-}
-
-
